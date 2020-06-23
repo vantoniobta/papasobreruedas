@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Papá sobre Ruedas</title>
+     <!--AJAX-->
+        <script>
+            $(document).ready(function() {
+                $("#my-form").submit(function(e) {
+                    e.preventDefault();
+                    $.ajax( {
+                        url: "insert.php",
+                        method: "post",
+                        data: $("form").serialize(),
+                        dataType: "text",
+                        success: function(strMessage) {
+                            $("#message").text(strMessage);
+                            $("#my-form")[0].reset();
+                        }
+                    });
+                });
+            });
+        </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12" style="text-align: center;color: #FFF"><br>
+          <h2>PARTICIPA POR TU FAVORITO</h2>
+        </div>
+
+        <div class="col-md-6"><br>
+          <img src="img/PapaSobreRuedas_logo2.png" class="img-fluid" alt="Responsive image">
+        </div>
+
+
+        <div class="col-md-6"><br>
+          <p id="message"></p>  
+           <form method="POST" id="my-form" action="">  
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Correo</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" name="email" required="">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Selecciona</label>
+              <select class="form-control" id="exampleFormControlSelect1"  name="auto" required="">
+                <option>CDMX - Ferrari 308</option>
+                <option>CDMX - Porche 82 SC</option>
+                <option>CDMX - Thunder 57</option>
+                <option>Monterrey - Camaro 68</option>
+                <option>Monterrey - Corvette Z06</option>
+                <option>Monterrey - Jeep Gladiador 2020</option>
+                <option>Monterrey - Mercedes V8 Viturbo</option>
+                <option>Saltillo - Karmann Ghia 1968</option>
+                <option>Torreón - Chevi 99</option>
+                <option>Durango - Jetta 2013</option>
+                <option>Tampico - Valiant</option>
+                <option>Chihuahua - Chevrolet 68 C10</option>
+                <option>Monclova - Bocho 1994</option>
+                <option>Matamoros - Jetta GLI 2004</option>
+                <option>Cd Juárez - Firebird Convertible 1967</option>
+                <option>Tijuana - Carro Tubular</option>
+                <option>Nuevo Laredo - Auto de los Picapiedra</option>
+                <option>León - Bocho 1984</option>
+                <option>Veracruz - Ford Tudor V8 1932</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-secondary">VOTAR</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-12"><br>
+         <h6><a href="participantes">Ver las Votaciones</a></h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

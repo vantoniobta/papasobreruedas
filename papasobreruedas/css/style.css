@@ -1,0 +1,33 @@
+body {
+  background: #C02425;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@font-face {
+  font-family: Staatliches Regula;
+  src: url(Staatliches-Regular.ttf);
+}
+h2{
+  font-family: "Staatliches Regula", cursive;
+  font-size: 40px;
+ }
+label{
+  font-family: "Staatliches Regula", cursive;
+  font-size: 15px;
+  color: #fff;
+}
+p{
+  font-family: "Staatliches Regula", cursive;
+  font-size: 20px;
+  color: #4d665f;
+  background-color: #C0FFEE;
+}
+.col-md-12{
+  text-align: center;
+  color: #fff;
+  font-family: "Staatliches Regula";
+  font-size: 12px;
+ }
+
+a{color: #fff;}
+
